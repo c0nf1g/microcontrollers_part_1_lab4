@@ -184,7 +184,7 @@ ISR(TIMER0_COMPA_vect) {
   if (counter <= 2) {
     counter++;
   } else {
-    if (switchTimer == true) {
+   
       if (allowed_timer1 == 1) {
         if (timerOne.second == 0 && timerOne.minute != 0) {
           timerOne.minute--;
@@ -208,7 +208,7 @@ ISR(TIMER0_COMPA_vect) {
           }
         }
       }
-    } else if (switchTimer == false) {
+     
       if (allowed_timer2 == 1) {
         if (timerTwo.second == 0 && timerTwo.minute != 0) {
           timerTwo.minute--;
@@ -232,7 +232,7 @@ ISR(TIMER0_COMPA_vect) {
           }
         }
       }
-    }
+    
 
     if (turnOnBuzzer == 1) {
       if ((counter_buzzer % 2) == 0) {
